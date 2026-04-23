@@ -1,0 +1,278 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+}
+
+.hero-section,
+.about-main {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-section {
+  background-image: url("./images/Fondos/FondoHome.png");
+  min-height: 100vh;
+  position: relative;
+  color: white;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.hero-contenido {
+  position: relative;
+  z-index: 2;
+  padding-top: 130px;
+  text-align: left;
+}
+
+.navbar {
+  background-color: rgba(20, 30, 60, 0.35);
+  backdrop-filter: blur(4px);
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+}
+
+.navbar-personalizada {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-collapse {
+  flex-grow: 1;
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.derecha-marca {
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.nav-link,
+.navbar-brand,
+.derecha-marca,
+.hero-section,
+.nombre-software {
+  color: white;
+}
+
+.hero-franco {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 600;
+  line-height: 0.95;
+}
+
+.hero-landaburu {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 800;
+  line-height: 0.95;
+}
+
+.hero-subtitulo {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero-botones .btn {
+  min-width: 160px;
+}
+
+footer {
+  background: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+/* Sobre mí */
+
+.pagina-sobre-mi {
+  background-color: #020816;
+  color: white;
+}
+
+.about-main {
+  background-image:
+    linear-gradient(rgba(1, 7, 25, 0.82), rgba(1, 7, 25, 0.9)),
+    url("./images/Fondos/FondoMouse.png");
+  min-height: 100vh;
+}
+
+.about-section {
+  padding-top: 130px;
+  padding-bottom: 60px;
+}
+
+.about-section .container {
+  max-width: 1460px;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.parte-superior {
+  margin-bottom: 34px;
+}
+
+.fila-inferior {
+  margin-bottom: 24px;
+}
+
+.bloque-texto-sobre-mi {
+  padding-top: 20px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.titulo-section {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.linea-titulo {
+  width: 74px;
+  height: 4px;
+  background-color: #0d6efd;
+  margin-bottom: 28px;
+}
+
+.parrafo-sobre-mi {
+  max-width: 620px;
+  font-size: 1rem;
+  line-height: 1.9;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.parte-superior .parrafo-sobre-mi {
+  max-width: 100%;
+  width: 100%;
+  padding-right: 12px;
+}
+
+.tarjeta-software {
+  background-color: rgba(5, 18, 53, 0.78);
+  border-radius: 22px;
+  padding: 34px 24px;
+  backdrop-filter: blur(4px);
+  height: 100%;
+}
+
+.titulo-software {
+  text-align: center;
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 32px;
+  text-transform: uppercase;
+}
+
+.grilla-software {
+  justify-content: center;
+}
+
+.icono-software {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.nombre-software {
+  font-size: 0.95rem;
+  line-height: 1.3;
+  margin-bottom: 0;
+}
+
+.panel-inferior-sobre-mi {
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.bloque-info-sobre-mi + .bloque-info-sobre-mi {
+  margin-top: 56px;
+}
+
+.tarjeta-resumen {
+  background-color: rgba(20, 31, 72, 0.72);
+  border-radius: 24px;
+  padding: 22px 16px;
+  backdrop-filter: blur(4px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-resumen {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  column-gap: 14px;
+  align-items: center;
+  align-content: center;
+  flex: 1 1 0;
+  min-height: 0;
+}
+
+.icono-resumen {
+  width: 50px;
+}
+
+.icono-resumen img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  display: block;
+}
+
+.texto-resumen {
+  width: 100%;
+  max-width: 100%;
+}
+
+.texto-resumen h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.texto-resumen p {
+  margin-bottom: 0;
+  font-size: 0.98rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 100%;
+}
+
+.divisor-resumen {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.55);
+  margin: 10px 0;
+  flex-shrink: 0;
+}
+
+/* Footer solo dentro de Sobre mí */
+.pagina-sobre-mi footer {
+  background: none;
+  position: relative;
+  bottom: auto;
+  width: 100%;
+  z-index: 2;
+}
