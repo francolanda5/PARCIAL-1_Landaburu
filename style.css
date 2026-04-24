@@ -276,3 +276,148 @@ footer {
   width: 100%;
   z-index: 2;
 }
+
+/* Proyectos */
+
+.pagina-proyectos {
+  background-color: #020816;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.proyectos-main {
+  background-image:
+    linear-gradient(rgba(4, 19, 64, 0.76), rgba(3, 21, 73, 0.9)),
+    url("./images/Fondos/FondoProyectos.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.proyectos-section {
+  padding-top: 130px;
+  padding-bottom: 70px;
+}
+
+.proyectos-section .container {
+  max-width: 1460px;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.titulo-proyectos {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 800;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 42px;
+  text-transform: uppercase;
+}
+
+.tarjeta-proyecto,
+.imagen-proyecto {
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.tarjeta-proyecto {
+  border: none;
+  background: transparent;
+}
+
+.imagen-proyecto {
+  position: relative;
+  min-height: 270px;
+  height: 100%;
+}
+
+.foto-proyecto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.55);
+}
+
+.imagen-proyecto::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 12%,
+    rgba(0, 0, 0, 0.25) 55%,
+    rgba(0, 0, 0, 0.18) 100%
+  );
+}
+
+.overlay-proyecto {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: end;
+}
+
+.contenido-proyecto {
+  width: 100%;
+  padding: 22px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 18px;
+}
+
+.texto-proyecto {
+  max-width: 75%;
+}
+
+.nombre-proyecto {
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+  font-weight: 800;
+  line-height: 1.05;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+}
+
+.etiquetas-proyecto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.etiqueta-proyecto,
+.boton-proyecto {
+  background-color: rgba(13, 42, 124, 0.95);
+  color: white;
+}
+
+.etiqueta-proyecto {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 8px 16px;
+}
+
+.boton-proyecto {
+  min-width: 146px;
+  border: none;
+  border-radius: 999px;
+  font-weight: 600;
+  padding: 10px 20px;
+}
+
+.boton-proyecto:hover {
+  background-color: rgba(18, 55, 156, 0.95);
+  color: white;
+}
+
+.pagina-proyectos footer {
+  background: none;
+  position: relative;
+  bottom: auto;
+  width: 100%;
+  z-index: 2;
+}
