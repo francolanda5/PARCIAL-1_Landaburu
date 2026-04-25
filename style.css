@@ -421,3 +421,246 @@ footer {
   width: 100%;
   z-index: 2;
 }
+
+
+/* Contacto */
+
+.pagina-contacto {
+  background-color: #020816;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.contacto-main {
+  background-image:
+    linear-gradient(rgba(1, 7, 25, 0.82), rgba(1, 7, 25, 0.9)),
+    url("./images/Fondos/FondoContacto.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.contacto-section {
+  padding-top: 130px;
+  padding-bottom: 70px;
+}
+
+.contacto-section .container {
+  max-width: 1460px;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.panel-contacto {
+  background-color: rgba(4, 13, 43, 0.55);
+  border-radius: 34px;
+  padding: 40px 42px;
+  backdrop-filter: blur(4px);
+}
+
+.columna-izquierda-contacto {
+  padding-right: 28px;
+}
+
+.titulo-contacto {
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+}
+
+.intro-contacto,
+.texto-info-contacto p,
+.texto-modal-contacto {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.intro-contacto {
+  max-width: 620px;
+  font-size: 1rem;
+  line-height: 1.85;
+  margin-bottom: 48px;
+}
+
+.formulario-contacto {
+  max-width: 560px;
+}
+
+.campo-contacto,
+.contacto-textarea {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 20px;
+  color: white;
+  font-size: 1rem;
+  padding: 14px 18px;
+}
+
+.campo-contacto::placeholder,
+.contacto-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.campo-contacto:focus,
+.contacto-textarea:focus {
+  background: transparent;
+  color: white;
+  border-color: rgba(255, 255, 255, 0.85);
+  box-shadow: none;
+}
+
+.contacto-textarea {
+  min-height: 150px;
+  resize: none;
+}
+
+.boton-contacto,
+.confirmar-modal-contacto {
+  background-color: rgba(10, 37, 126, 0.95);
+  color: white;
+}
+
+.boton-contacto {
+  min-width: 220px;
+  border: none;
+  border-radius: 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 24px;
+}
+
+.boton-contacto:hover,
+.confirmar-modal-contacto:hover {
+  background-color: rgba(15, 46, 148, 0.95);
+  color: white;
+}
+
+.columna-derecha-contacto {
+  height: 100%;
+  padding-left: 28px;
+  border-left: 2px solid rgba(255, 255, 255, 0.55);
+}
+
+.titulo-redes {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+}
+
+.enlaces-redes {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 28px;
+}
+
+.enlace-red img,
+.icono-info-contacto img {
+  object-fit: contain;
+  display: block;
+}
+
+.enlace-red img {
+  width: 56px;
+  height: 56px;
+}
+
+.divisor-contacto {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.55);
+  margin: 28px 0;
+}
+
+.dato-contacto {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  column-gap: 18px;
+  align-items: start;
+}
+
+.icono-info-contacto img {
+  width: 48px;
+  height: 48px;
+}
+
+.texto-info-contacto h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.texto-info-contacto p {
+  margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.pagina-contacto footer {
+  background: none;
+  position: relative;
+  bottom: auto;
+  width: 100%;
+  z-index: 2;
+}
+
+/* Modales de contacto */
+
+.contacto-contenido-modal {
+  background-color: rgba(4, 13, 43, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 28px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.contacto-cuerpo-modal {
+  padding: 28px 24px;
+}
+
+.titulo-modal-contacto {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.texto-modal-contacto {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.acciones-modal-contacto {
+  display: flex;
+  gap: 14px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.cancelar-modal-contacto,
+.confirmar-modal-contacto {
+  min-width: 140px;
+  border-radius: 16px;
+  padding: 12px 18px;
+  font-weight: 600;
+  border: none;
+}
+
+.cancelar-modal-contacto {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: white;
+}
+
+.cancelar-modal-contacto:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: white;
+}
