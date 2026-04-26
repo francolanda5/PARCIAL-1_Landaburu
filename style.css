@@ -306,19 +306,31 @@ footer {
   padding-right: 28px;
 }
 
-.titulo-proyectos {
-  font-size: clamp(3rem, 7vw, 5.5rem);
+.titulo-proyectos,
+.nombre-proyecto,
+.titulo-modal-modelado {
   font-weight: 800;
   line-height: 1;
+  text-transform: uppercase;
+}
+
+.titulo-proyectos {
+  font-size: clamp(3rem, 7vw, 5.5rem);
   text-align: center;
   margin-bottom: 42px;
-  text-transform: uppercase;
+}
+
+.tarjeta-proyecto,
+.imagen-proyecto,
+.imagen-modal-modelado-box,
+.video-modelado-embed-box,
+.figma-embed-box {
+  overflow: hidden;
 }
 
 .tarjeta-proyecto,
 .imagen-proyecto {
   border-radius: 28px;
-  overflow: hidden;
 }
 
 .tarjeta-proyecto {
@@ -332,11 +344,17 @@ footer {
   height: 100%;
 }
 
-.foto-proyecto {
+.foto-proyecto,
+.imagen-modal-modelado,
+.iframe-video-modelado,
+.iframe-figma-modelado {
   width: 100%;
+  display: block;
+}
+
+.foto-proyecto {
   height: 100%;
   object-fit: cover;
-  display: block;
   filter: brightness(0.55);
 }
 
@@ -375,10 +393,8 @@ footer {
 
 .nombre-proyecto {
   font-size: clamp(1.7rem, 3vw, 2.2rem);
-  font-weight: 800;
   line-height: 1.05;
   margin-bottom: 12px;
-  text-transform: uppercase;
   color: white;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
 }
@@ -421,6 +437,188 @@ footer {
   width: 100%;
   z-index: 2;
 }
+
+/* =========================
+   MODALES DE PROYECTOS
+========================= */
+
+.modal-modelado3d .modal-dialog,
+.modal-redes-sociales .modal-dialog {
+  max-width: 1180px;
+}
+
+.contenido-modal-modelado {
+  background-color: rgba(2, 13, 52, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 34px;
+  backdrop-filter: blur(8px);
+  overflow: visible;
+  position: relative;
+  padding: 34px 46px 56px;
+}
+
+.cerrar-modal-modelado {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  z-index: 5;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 3rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.slide-modelado {
+  min-height: 720px;
+  display: flex;
+  align-items: center;
+}
+
+.slide-modelado-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.95fr 1.35fr;
+  gap: 34px;
+  align-items: center;
+}
+
+.titulo-modal-modelado {
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  line-height: 0.95;
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.subtitulo-modal-modelado {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 28px;
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.texto-modal-modelado,
+.caption-modal-modelado {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.texto-modal-modelado {
+  font-size: 1rem;
+  line-height: 1.85;
+  margin-bottom: 0;
+}
+
+.imagen-modal-modelado-box {
+  border-radius: 22px;
+}
+
+.imagen-modal-modelado {
+  object-fit: cover;
+}
+
+.caption-modal-modelado {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 12px;
+  margin-bottom: 26px;
+}
+
+.badges-modal-modelado {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px 18px;
+}
+
+.etiqueta-modal-modelado {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 58px;
+  border-radius: 10px;
+  border: 1px solid rgba(19, 85, 255, 0.85);
+  background-color: rgba(5, 17, 58, 0.65);
+  color: white;
+  font-size: 0.98rem;
+  font-weight: 500;
+  padding: 12px 16px;
+}
+
+.slide-video-modelado {
+  justify-content: center;
+}
+
+.video-modelado-embed-box,
+.figma-embed-box {
+  width: 100%;
+  max-width: 1120px;
+  aspect-ratio: 16 / 9;
+  border-radius: 26px;
+  margin: 0 auto;
+}
+
+.figma-embed-box {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.iframe-video-modelado,
+.iframe-figma-modelado {
+  height: 100%;
+  border: none;
+}
+
+.control-modelado {
+  width: 56px;
+  height: 56px;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+  opacity: 1;
+  background: transparent;
+}
+
+.prev-modelado {
+  left: -72px;
+}
+
+.next-modelado {
+  right: -72px;
+}
+
+.flecha-modelado {
+  width: 56px;
+  height: 56px;
+  border: 1px solid rgba(15, 84, 255, 0.85);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  line-height: 1;
+  color: white;
+  background-color: rgba(4, 12, 44, 0.18);
+}
+
+.indicadores-modelado {
+  position: absolute;
+  bottom: 10px;
+  margin-bottom: 0;
+}
+
+.indicadores-modelado button {
+  width: 16px !important;
+  height: 16px !important;
+  border-radius: 50%;
+  margin: 0 8px !important;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.55);
+  opacity: 1;
+}
+
+.indicadores-modelado .active {
+  background-color: white;
+}
+
 
 
 /* Contacto */
@@ -608,6 +806,46 @@ footer {
   width: 100%;
   z-index: 2;
 }
+
+.aviso-youtube-box {
+  width: 100%;
+  max-width: 1120px;
+  min-height: 420px;
+  margin: 0 auto;
+  border-radius: 26px;
+  background-color: rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  padding: 32px;
+  text-align: center;
+}
+
+.texto-aviso-youtube {
+  max-width: 520px;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.96);
+  margin-bottom: 0;
+}
+
+.boton-youtube-externo {
+  min-width: 220px;
+  border: none;
+  border-radius: 999px;
+  background-color: rgba(13, 42, 124, 0.95);
+  color: white;
+  font-weight: 600;
+  padding: 12px 24px;
+}
+
+.boton-youtube-externo:hover {
+  background-color: rgba(18, 55, 156, 0.95);
+  color: white;
+}
+
 
 /* Modales de contacto */
 
