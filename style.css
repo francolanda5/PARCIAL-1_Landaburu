@@ -287,7 +287,7 @@ footer {
 
 .proyectos-main {
   background-image:
-    linear-gradient(rgba(4, 19, 64, 0.76), rgba(3, 21, 73, 0.9)),
+    linear-gradient(rgba(1, 7, 25, 0.82), rgba(1, 7, 25, 0.9)),
     url("./images/Fondos/FondoProyectos.png");
   background-size: cover;
   background-position: center;
@@ -507,6 +507,15 @@ footer {
   font-size: 1rem;
   line-height: 1.85;
   margin-bottom: 0;
+}
+
+.descripcion-desktop-tecnica {
+  display: block;
+}
+
+.boton-descripcion-tecnica,
+.descripcion-mobile-tecnica {
+  display: none;
 }
 
 .imagen-modal-modelado-box {
@@ -735,6 +744,15 @@ footer {
   color: white;
 }
 
+.boton-contacto:disabled {
+  background-color: #5f667a;
+  border-color: #5f667a;
+  color: rgba(255, 255, 255, 0.85);
+  opacity: 1;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 .columna-derecha-contacto {
   height: 100%;
   padding-left: 28px;
@@ -901,4 +919,89 @@ footer {
 .cancelar-modal-contacto:hover {
   background-color: rgba(255, 255, 255, 0.08);
   color: white;
+}
+
+/* =========================
+   ANIMACIONES ESTILO ANIMISTA
+========================= */ /* bloque de animaciones personalizadas */
+
+/* Línea decorativa debajo de títulos */
+.linea-titulo {
+  animation: scale-in-hor-left-suave 0.55s ease-out 0.15s both; /* hace que la línea aparezca desde la izquierda, suave y con un pequeño delay */
+}
+
+/* Cards de proyectos */
+.tarjeta-proyecto {
+  transition: transform 0.28s ease, box-shadow 0.28s ease; /* suaviza movimiento y sombra de la card */
+}
+
+.foto-proyecto {
+  transition: transform 0.35s ease, filter 0.35s ease; /* suaviza zoom y cambio de brillo de la imagen */
+}
+
+.tarjeta-proyecto:hover {
+  transform: translateY(-6px); /* levanta la card un poco al pasar el mouse */
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22); /* agrega sombra para reforzar el efecto de elevación */
+}
+
+.tarjeta-proyecto:hover .foto-proyecto {
+  transform: scale(1.03); /* agranda levemente la imagen */
+  filter: brightness(0.62); /* oscurece un poco la imagen */
+}
+
+/* Botones */
+.hero-botones .btn,
+.boton-proyecto,
+.boton-contacto,
+.confirmar-modal-contacto,
+.cancelar-modal-contacto {
+  transition:
+    transform 0.22s ease, /* suaviza movimiento o escala del botón */
+    box-shadow 0.22s ease, /* suaviza aparición de sombra */
+    background-color 0.22s ease, /* suaviza cambio de color de fondo */
+    border-color 0.22s ease; /* suaviza cambio de color del borde */
+}
+
+.hero-botones .btn:hover,
+.boton-proyecto:hover,
+.boton-contacto:hover,
+.confirmar-modal-contacto:hover,
+.cancelar-modal-contacto:hover {
+  transform: translateY(-2px) scale(1.02); /* sube apenas el botón y lo agranda un poco */
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.18); /* agrega sombra suave al hover */
+}
+
+/* Links de navbar */
+.nav-link,
+.navbar-brand,
+.marca-derecha,
+.brand-right {
+  transition: opacity 0.2s ease, transform 0.2s ease; /* suaviza transparencia y movimiento del link */
+}
+
+.nav-link:hover,
+.navbar-brand:hover,
+.marca-derecha:hover,
+.brand-right:hover {
+  opacity: 0.85; /* baja un poco la opacidad para marcar hover */
+  transform: translateY(-1px); /* sube apenas el enlace */
+}
+
+/* =========================
+   KEYFRAMES
+========================= */ /* definiciones de animaciones */
+
+
+/* Animación horizontal que se expande desde la izquierda */
+@keyframes scale-in-hor-left-suave {
+  0% {
+    transform: scaleX(0.2); /* arranca con muy poco ancho */
+    transform-origin: 0% 0%; /* la expansión sale desde la izquierda */
+    opacity: 0; /* arranca invisible */
+  }
+  100% {
+    transform: scaleX(1); /* termina con su ancho completo */
+    transform-origin: 0% 0%; /* mantiene el origen a la izquierda */
+    opacity: 1; /* termina visible */
+  }
 }

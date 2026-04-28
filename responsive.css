@@ -821,9 +821,13 @@
     line-height: 1.2;
   }
 
-  /* PROYECTOS */
+ /* PROYECTOS MOBILE */
 
-  .boton-descripcion-tecnica,
+@media screen and (max-width: 767px) {
+  .boton-descripcion-tecnica {
+    display: none;
+  }
+
   .descripcion-mobile-tecnica {
     display: none;
   }
@@ -839,6 +843,11 @@
   .proyectos-section {
     padding-top: 112px;
     padding-bottom: 42px;
+  }
+
+  .proyectos-section .container {
+    padding-left: 18px;
+    padding-right: 18px;
   }
 
   .titulo-proyectos {
@@ -872,6 +881,7 @@
   .boton-proyecto {
     width: 100%;
     max-width: none;
+    min-width: 0;
     padding: 10px 18px;
   }
 
@@ -882,23 +892,21 @@
   }
 
   .contenido-modal-modelado {
-    padding: 56px 16px 104px;
+    padding: 30px 16px 44px;
     border-radius: 22px;
-    min-height: 760px;
-    overflow: hidden;
-  }
-
-  .contenido-modal-modelado .carousel-inner,
-  .contenido-modal-modelado .carousel-item,
-  .slide-modelado {
-    min-height: 650px;
+    min-height: auto;
   }
 
   .cerrar-modal-modelado {
     top: 10px;
     right: 12px;
-    z-index: 30;
     font-size: 2.4rem;
+    z-index: 30;
+  }
+
+  .slide-modelado {
+    min-height: auto;
+    padding-bottom: 70px;
   }
 
   .slide-info-modelado .slide-modelado-grid {
@@ -906,7 +914,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 18px;
+    gap: 16px;
   }
 
   .slide-info-modelado .info-modelado,
@@ -914,31 +922,29 @@
     display: contents;
   }
 
-  .slide-info-modelado .titulo-modal-modelado,
-  .slide-info-modelado .subtitulo-modal-modelado,
-  .slide-info-modelado .imagen-modal-modelado-box,
-  .slide-info-modelado .descripcion-mobile-tecnica,
-  .slide-info-modelado .badges-modal-modelado {
-    width: 100%;
-  }
-
   .slide-info-modelado .titulo-modal-modelado {
     order: 1;
+    width: 100%;
     margin-bottom: 0;
     font-size: clamp(2rem, 8vw, 2.8rem);
   }
 
   .slide-info-modelado .subtitulo-modal-modelado {
     order: 2;
+    width: 100%;
     font-size: 0.95rem;
     margin-bottom: 0;
   }
 
   .slide-info-modelado .imagen-modal-modelado-box {
     order: 3;
+    width: 100%;
   }
 
-  .slide-info-modelado .caption-modal-modelado,
+  .slide-info-modelado .caption-modal-modelado {
+    display: none;
+  }
+
   .slide-info-modelado .descripcion-desktop-tecnica {
     display: none;
   }
@@ -950,7 +956,7 @@
     align-items: center;
     width: 100%;
     max-width: 260px;
-    min-height: 50px;
+    min-height: 48px;
     border: 1px solid rgba(19, 85, 255, 0.85);
     border-radius: 12px;
     background-color: rgba(5, 17, 58, 0.65);
@@ -963,6 +969,7 @@
   .slide-info-modelado .descripcion-mobile-tecnica {
     display: none;
     order: 5;
+    width: 100%;
   }
 
   .slide-info-modelado .descripcion-mobile-tecnica.show,
@@ -983,31 +990,33 @@
 
   .slide-info-modelado .badges-modal-modelado {
     order: 6;
-    grid-template-columns: 1fr;
-    gap: 10px;
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px 10px;
   }
 
   .slide-info-modelado .etiqueta-modal-modelado {
-    min-height: auto;
-    font-size: 0.9rem;
-    padding: 12px 14px;
+    min-height: 44px;
+    padding: 10px 8px;
+    font-size: 0.84rem;
+    line-height: 1.25;
     white-space: normal;
-    line-height: 1.35;
+    overflow-wrap: anywhere;
     text-align: center;
   }
 
   .slide-video-modelado {
     justify-content: center;
     align-items: center;
-    padding-top: 24px;
-    padding-bottom: 12px;
+    padding: 24px 0 70px;
   }
 
   .video-modelado-embed-box {
     width: 100%;
-    max-width: 560px;
+    max-width: 100%;
     aspect-ratio: 16 / 9;
     border-radius: 18px;
+    margin: 0 auto;
   }
 
   .figma-embed-box {
@@ -1015,7 +1024,7 @@
     max-width: 340px;
     aspect-ratio: 9 / 16;
     border-radius: 18px;
-    margin: 46px auto 0;
+    margin: 24px auto 0;
     background-color: #ffffff;
   }
 
@@ -1026,10 +1035,10 @@
   .control-modelado {
     width: 40px;
     height: 40px;
-    top: auto;
-    bottom: 18px;
-    transform: none;
-    z-index: 20;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    z-index: 25;
   }
 
   .flecha-modelado {
@@ -1039,16 +1048,17 @@
   }
 
   .prev-modelado {
-    left: 18px;
+    left: -6px;
   }
 
   .next-modelado {
-    right: 18px;
+    right: -6px;
   }
 
   .indicadores-modelado {
-    bottom: 30px;
+    bottom: 18px;
     margin-bottom: 0;
+    z-index: 24;
   }
 
   .indicadores-modelado button {
@@ -1072,6 +1082,184 @@
     width: 100%;
     max-width: 240px;
   }
+}
+
+/* PROYECTOS MOBILE CHICO */
+
+@media screen and (max-width: 360px) {
+  .proyectos-section {
+    padding-top: 108px;
+    padding-bottom: 34px;
+  }
+
+  .proyectos-section .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .titulo-proyectos {
+    margin-bottom: 22px;
+  }
+
+  .imagen-proyecto {
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+    background-color: rgba(5, 17, 58, 0.45);
+  }
+
+  .foto-proyecto {
+    height: 100%;
+    object-fit: contain;
+    background-color: rgba(0, 0, 0, 0.12);
+  }
+
+  .contenido-proyecto {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 10px;
+    padding: 14px 12px;
+  }
+
+  .texto-proyecto {
+    max-width: none;
+    min-width: 0;
+  }
+
+  .nombre-proyecto {
+    font-size: 1.22rem;
+    margin-bottom: 0;
+  }
+
+  .etiquetas-proyecto {
+    display: none;
+  }
+
+  .boton-proyecto {
+    width: auto;
+    max-width: none;
+    min-width: 110px;
+    padding: 9px 14px;
+    font-size: 0.92rem;
+  }
+
+  .contenido-modal-modelado {
+    padding: 22px 12px 40px;
+    border-radius: 18px;
+    min-height: auto;
+  }
+
+  .cerrar-modal-modelado {
+    top: 8px;
+    right: 10px;
+    font-size: 2.2rem;
+    z-index: 30;
+  }
+
+  .slide-modelado {
+    min-height: auto;
+    padding-bottom: 64px;
+  }
+
+  .slide-info-modelado .titulo-modal-modelado {
+    font-size: 1.9rem;
+  }
+
+  .slide-info-modelado .subtitulo-modal-modelado {
+    font-size: 0.9rem;
+  }
+
+  .slide-info-modelado .boton-descripcion-tecnica {
+    font-size: 0.88rem;
+    padding: 10px 12px;
+  }
+
+  .slide-info-modelado .descripcion-mobile-tecnica .texto-modal-modelado {
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  .slide-info-modelado .badges-modal-modelado {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .slide-info-modelado .etiqueta-modal-modelado {
+    min-height: 42px;
+    padding: 9px 7px;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .slide-video-modelado {
+    padding: 18px 0 64px;
+  }
+
+  .video-modelado-embed-box {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 14px;
+    margin: 0 auto;
+  }
+
+  .figma-embed-box {
+    width: 100%;
+    max-width: 292px;
+    aspect-ratio: 9 / 16;
+    border-radius: 14px;
+    margin: 18px auto 0;
+    background-color: #ffffff;
+  }
+
+  .iframe-figma-modelado {
+    background-color: #ffffff;
+  }
+
+  .control-modelado {
+    width: 34px;
+    height: 34px;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    z-index: 25;
+  }
+
+  .flecha-modelado {
+    width: 34px;
+    height: 34px;
+    font-size: 1.1rem;
+  }
+
+  .prev-modelado {
+    left: -2px;
+  }
+
+  .next-modelado {
+    right: -2px;
+  }
+
+  .indicadores-modelado {
+    bottom: 14px;
+    z-index: 24;
+  }
+
+  .indicadores-modelado button {
+    width: 10px !important;
+    height: 10px !important;
+    margin: 0 4px !important;
+  }
+
+  .aviso-youtube-box {
+    min-height: 250px;
+    padding: 18px 14px;
+  }
+
+  .texto-aviso-youtube {
+    font-size: 0.92rem;
+  }
+}
 
   /* CONTACTO */
 

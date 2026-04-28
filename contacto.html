@@ -70,32 +70,32 @@
                   Si querés comunicarte conmigo por consultas, trabajos o proyectos, podés enviarme un mensaje a través del formulario.
                 </p>
 
-                <form class="formulario-contacto" action="#" method="post">
+                <form id="formularioContacto" class="formulario-contacto" action="#" method="post">
                   <div class="mb-3">
                     <label for="nombre" class="visually-hidden">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" class="form-control campo-contacto" placeholder="Nombre">
+                    <input type="text" id="nombre" name="nombre" class="form-control campo-contacto" placeholder="Nombre" required>
                   </div>
 
                   <div class="mb-3">
                     <label for="correo" class="visually-hidden">Correo electrónico</label>
-                    <input type="email" id="correo" name="correo" class="form-control campo-contacto" placeholder="Correo electrónico">
+                    <input type="email" id="correo" name="correo" class="form-control campo-contacto" placeholder="Correo electrónico" required>
                   </div>
 
                   <div class="mb-3">
                     <label for="asunto" class="visually-hidden">Asunto</label>
-                    <input type="text" id="asunto" name="asunto" class="form-control campo-contacto" placeholder="Asunto">
+                    <input type="text" id="asunto" name="asunto" class="form-control campo-contacto" placeholder="Asunto" required>
                   </div>
 
                   <div class="mb-4">
                     <label for="mensaje" class="visually-hidden">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" class="form-control contacto-textarea" placeholder="Mensaje"></textarea>
+                    <textarea id="mensaje" name="mensaje" class="form-control contacto-textarea" placeholder="Mensaje" required></textarea>
                   </div>
 
                   <button
+                    id="botonAbrirConfirmacion"
                     type="button"
                     class="btn boton-contacto"
-                    data-bs-toggle="modal"
-                    data-bs-target="#confirmarModal"
+                    disabled
                   >
                     ENVIAR
                   </button>
@@ -227,7 +227,7 @@
           </p>
 
           <div class="acciones-modal-contacto">
-            <button type="button" class="btn confirmar-modal-contacto" data-bs-dismiss="modal">
+            <button type="submit" class="btn confirmar-modal-contacto" data-bs-dismiss="modal">
               Cerrar
             </button>
           </div>
@@ -238,5 +238,34 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  const formularioContacto = document.getElementById("formularioContacto");
+  const botonAbrirConfirmacion = document.getElementById("botonAbrirConfirmacion");
+  const modalConfirmacion = new bootstrap.Modal(document.getElementById("confirmarModal"));
+
+  function formularioCompletoYValido() {
+    return formularioContacto.checkValidity();
+  }
+
+  function actualizarEstadoBoton() {
+    if (formularioCompletoYValido()) {
+      botonAbrirConfirmacion.disabled = false;
+    } else {
+      botonAbrirConfirmacion.disabled = true;
+    }
+  }
+
+  formularioContacto.addEventListener("input", actualizarEstadoBoton);
+  formularioContacto.addEventListener("change", actualizarEstadoBoton);
+
+  botonAbrirConfirmacion.addEventListener("click", function () {
+    if (formularioCompletoYValido()) {
+      modalConfirmacion.show();
+    }
+  });
+
+  actualizarEstadoBoton();
+</script>
 </body>
 </html>
