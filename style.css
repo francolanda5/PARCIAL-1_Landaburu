@@ -13,7 +13,7 @@ body {
 }
 
 .hero-section {
-  background-image: url("./images/Fondos/FondoHome.png");
+  background-image: url("./images/Fondos/FondoHome.avif");
   min-height: 100vh;
   position: relative;
   color: white;
@@ -108,7 +108,7 @@ footer {
 .about-main {
   background-image:
     linear-gradient(rgba(1, 7, 25, 0.82), rgba(1, 7, 25, 0.9)),
-    url("./images/Fondos/FondoMouse.png");
+    url("./images/Fondos/FondoMouse.avif");
   min-height: 100vh;
 }
 
@@ -288,7 +288,7 @@ footer {
 .proyectos-main {
   background-image:
     linear-gradient(rgba(1, 7, 25, 0.82), rgba(1, 7, 25, 0.9)),
-    url("./images/Fondos/FondoProyectos.png");
+    url("./images/Fondos/FondoProyectos.avif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -641,7 +641,7 @@ footer {
 .contacto-main {
   background-image:
     linear-gradient(rgba(1, 7, 25, 0.82), rgba(1, 7, 25, 0.9)),
-    url("./images/Fondos/FondoContacto.png");
+    url("./images/Fondos/FondoContacto.avif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
